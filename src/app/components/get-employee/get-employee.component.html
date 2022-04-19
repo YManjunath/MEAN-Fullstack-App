@@ -1,0 +1,54 @@
+<!-- <table class="table table-hover">
+  <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email</td>
+      <td>Phone</td>
+      <td colspan="2">Actions</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.firstName }}</td>
+      <td>{{ emp.lastName  }}</td>
+      <td>{{ emp.email  }}</td>
+      <td>{{ emp.phone  }}</td>
+      <td><a [routerLink]="['addEmployee', emp._id]" class="btn btn-primary">Edit</a></td>
+      <td><a (click)="deleteEmp(emp._id)" class="btn btn-danger">Delete</a></td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div _ngcontent-ipx-c94="" class="card">
+  <div _ngcontent-ipx-c94="" class="card-header card-header-danger">
+    <h4 _ngcontent-ipx-c94="" class="card-title">Employee Details</h4>
+    <!-- <p _ngcontent-ipx-c94="" class="card-category"> Here is a subtitle for this table</p> -->
+  </div>
+  <div _ngcontent-ipx-c94="" class="card-body">
+    <div _ngcontent-ipx-c94="" class="table-responsive">
+      <table _ngcontent-ipx-c94="" class="table">
+        <thead _ngcontent-ipx-c94="" class="text-primary">
+          <th _ngcontent-ipx-c94=""> ID </th>
+          <th _ngcontent-ipx-c94=""> Name </th>
+          <th _ngcontent-ipx-c94=""> Email </th>
+          <th _ngcontent-ipx-c94=""> Phone </th>
+          <th colspan="2">Actions</th>
+        </thead>
+        <tbody _ngcontent-ipx-c94="">
+          <tr _ngcontent-ipx-c94="" *ngFor="let emp of employees">
+            <td>{{ emp._id }}</td>
+            <td>{{ emp.firstName }} {{ emp.lastName  }}</td>
+            <td>{{ emp.email  }}</td>
+            <td>{{ emp.phone  }}</td>
+            <td><i [routerLink]="['addEmployee', emp._id]" class="fa fa-pencil-square-o icon" aria-hidden="true"></i></td>
+            <td><i (click)="deleteEmp(emp._id)" class="fa fa-trash-o icon" aria-hidden="true"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

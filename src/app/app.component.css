@@ -1,0 +1,10 @@
+.nav-bar {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-link {
+    color: #fff;
+}
