@@ -4,12 +4,12 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { GetEmployeeComponent } from './components/get-employee/get-employee.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './login/login/login.component';
 
 const routes: Routes = [
-  // {path:'/', redirectTo:'employees', component:GetEmployeeComponent},
   {path:'', component:HomeComponent},
+  // {path:'login', component:LoginComponent},
   {path:'employees/addEmployee', component:AddEmployeeComponent},
-  // {path:'employees/editEmployee/:id', component:EditEmployeeComponent},
   {path:'employees/addEmployee/:id', component:AddEmployeeComponent},
   {path:'employees', component:GetEmployeeComponent}
 ];

@@ -5,6 +5,8 @@ import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import * as _ from 'underscore';
+import { states } from '../../../assets/data/states';
+import { cityList } from 'src/assets/data/city';
 
 @Component({
   selector: 'app-add-employee',
@@ -18,6 +20,8 @@ export class AddEmployeeComponent implements OnInit {
   empEditData: any;
   showUpdateBtn: Boolean = false;
   editId:any;
+  allStates: any = [];
+  allCity= [];
 
   constructor(
     private fb: FormBuilder,
@@ -25,7 +29,10 @@ export class AddEmployeeComponent implements OnInit {
     private toastr: ToastrService,
     private route: ActivatedRoute,
     private router: Router,
-    ) { }
+    ) { 
+      this.allStates = states;
+      console.log(cityList)
+    }
 
 
     
@@ -36,6 +43,8 @@ export class AddEmployeeComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
+      state: ['', Validators.required],
+      city: ['', Validators.required],
     })
 
     this.route.params.subscribe(params=>{
@@ -82,6 +91,11 @@ export class AddEmployeeComponent implements OnInit {
     this.empService.updateEmployee(this.editId,objupdate);
     this.toastr.success('Employee Updated Succesfully !');
     this.resetEmployee()
+  }
+
+  onStateChange(e: any){
+    console.log(e.target.value);
+      // this.allCity = cityList['']]
   }
 
 }
